@@ -22,3 +22,15 @@ html {
 .h1-font {
   font-size: 1.2rem;
 }
+h5 {
+  background-color:#dcdcdc;
+  padding: 0.5rem;
+}
+/* 画像設定 */
+@media screen and (max-width:480px) {
+  img {
+  width:100%;
+  max-width: 100%;
+  height: auto;
+  }
+}
