@@ -101,9 +101,9 @@ const IndexPage = ({data}) => (
           </Col>
           <Col xs={6} md={4}>
             <Card style={{marginTop:`1rem`}}>
-              <Card.Img variant="top" src={C3Img} alt={`LINEマーケティング`} />
+              <Card.Img variant="top" src={C3Img} alt={`記事一覧`} />
               <Card.Body>
-                <Card.Title style={{fontSize:`1rem`}}>LINEマーケティング</Card.Title>
+                <Card.Title style={{fontSize:`1rem`}}>記事一覧</Card.Title>
               </Card.Body>
             </Card>
           </Col>
