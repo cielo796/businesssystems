@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Pagination } from "../components/pagination"
 
-const InformationPage = ({ data }) => (
+const InformationPageAllNews = ({ data }) => (
   <Layout>
     <SEO title="記事一覧" />
     <Row>
@@ -44,11 +44,14 @@ const InformationPage = ({ data }) => (
   </Layout>
 );
 
-export default InformationPage;
+export default InformationPageAllNews;
 
 export const query = graphql`
-query MyQuery {
-    allMicrocmsInformation (sort: {fields: [date], order: DESC},limit: 5, skip: 0) {
+query ($limit: Int!, $skip: Int!) {
+    allMicrocmsInformation (
+        sort: {fields: [date], order: DESC},
+        filter: {category: {category: {eq: "NEWS"}}},
+        limit: $limit, skip: $skip) {
       totalCount
       edges {
         node {

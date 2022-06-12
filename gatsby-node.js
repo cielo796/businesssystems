@@ -13,6 +13,7 @@ exports.createPages = ({ graphql, actions }) => {
     `
       {
         allMicrocmsInformation {
+          totalCount
           edges {
             node {
                 id
@@ -35,6 +36,36 @@ exports.createPages = ({ graphql, actions }) => {
         }
       })
   })
+
+  const PerPage = 5
+  const pageCount = Math.ceil(result.data.allMicrocmsInformation.totalCount / PerPage)
+
+  
+  for (let i = 0; i < pageCount; i++) {
+    createPage({
+      path: `/information/${i + 1}`,
+      component: path.resolve("./src/templates/informationpage.js"),
+      context: {
+        limit: PerPage,
+        skip: i * PerPage,
+      },
+    })
+  }
+
+  const PerPageNews = 5
+  const pageCountNews = Math.ceil(result.data.allMicrocmsInformation.totalCount / PerPage)
+
+  
+  for (let i = 0; i < pageCountNews; i++) {
+    createPage({
+      path: `/informationnews/${i + 1}`,
+      component: path.resolve("./src/templates/informationpagenews.js"),
+      context: {
+        limit: PerPageNews,
+        skip: i * PerPageNews,
+      },
+    })
+  }
 
   })
 }

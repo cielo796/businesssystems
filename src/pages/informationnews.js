@@ -3,9 +3,9 @@ import { Link, graphql } from "gatsby";
 import { Col, Row, Card , Button } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import { Pagination } from "../components/pagination"
+import { PaginationNews } from "../components/paginationnews"
 
-const InformationPage = ({ data }) => (
+const InformationNewsPage = ({ data }) => (
   <Layout>
     <SEO title="記事一覧" />
     <Row>
@@ -40,15 +40,19 @@ const InformationPage = ({ data }) => (
     <Row>
       <Col className="space"> </Col>
     </Row>
-    <Pagination totalCount={data.allMicrocmsInformation.totalCount} />
+    <PaginationNews totalCount={data.allMicrocmsInformation.totalCount} />
   </Layout>
 );
 
-export default InformationPage;
+export default InformationNewsPage;
 
 export const query = graphql`
-query MyQuery {
-    allMicrocmsInformation (sort: {fields: [date], order: DESC},limit: 5, skip: 0) {
+query postnews {
+    allMicrocmsInformation (
+        sort: {fields: [date], order: DESC}
+        filter: {category: {category: {eq: "NEWS"}}}
+        ,limit: 5, skip: 0
+        ) {
       totalCount
       edges {
         node {

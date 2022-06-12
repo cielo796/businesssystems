@@ -8,7 +8,6 @@ import homeImg from "../images/hometop.jpg"
 import C1Img from "../images/contents.jpg"
 import C2Img from "../images/book.jpg"
 import C3Img from "../images/marketing.jpg"
-import jigyo3Img from "../images/jigyo3.jpg"
 
 const IndexPage = ({data}) => (
   <Layout>
@@ -37,6 +36,7 @@ const IndexPage = ({data}) => (
             </Card>
           </Row>
         ))}
+        <div class="btn-set"><Button variant="primary"><Link to = "/informationnews"><div class="whcolor">記事一覧へ</div></Link></Button></div>
       </Col>
       <Col xs={12} md={6} style={{maxWidth:`400px`}}>
         <Row>
