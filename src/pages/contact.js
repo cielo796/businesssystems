@@ -20,13 +20,21 @@ const ContactPage = () => (
             <Container className="" style={{width:`80%`}}>
             <Row>
                 <Col>
-                    <p>（※このサンプルサイトで送信機能は使用できません）</p>
-                    <Form>
+                    <Form method="post"
+                        action="https://www.flexyform.com/f/51b3b425f5ef88aec45c32c44785f9f557148c55"
+                        encType="multipart/from-data" >
+                    <Form.Control type="text" as="input" style={{visibility:'hidden'}} name="_empty_filed"/>
                     <Form.Group controlId="formBasicText">
                         <Form.Control type="text" as="input" placeholder="お名前" name="name" required />
                     </Form.Group>
+                    <Form.Group controlId="formBasicenterprise">
+                        <Form.Control type="text" as="input" placeholder="会社名" name="enterprise" required />
+                    </Form.Group>
                     <Form.Group controlId="formBasicEmail">
                         <Form.Control type="email" as="input" placeholder="メールアドレス" name="email" required />
+                    </Form.Group>
+                    <Form.Group controlId="formBasicPhone">
+                        <Form.Control type="email" as="input" placeholder="電話番号" name="Phone" required />
                     </Form.Group>
                     <Form.Group controlId="formTextarea">
                         <Form.Control as="textarea" placeholder="メッセージ" rows="3" name="message" required />
