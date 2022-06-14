@@ -34,7 +34,7 @@ const ContactPage = () => (
                         <Form.Control type="email" as="input" placeholder="メールアドレス" name="email" required />
                     </Form.Group>
                     <Form.Group controlId="formBasicPhone">
-                        <Form.Control type="email" as="input" placeholder="電話番号" name="Phone" required />
+                        <Form.Control type="text" as="input" placeholder="電話番号" name="Phone" required />
                     </Form.Group>
                     <Form.Group controlId="formTextarea">
                         <Form.Control as="textarea" placeholder="メッセージ" rows="3" name="message" required />
