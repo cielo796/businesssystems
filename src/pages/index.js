@@ -93,7 +93,8 @@ const IndexPage = ({data}) => (
         <Row>
           <Col xs={6} md={4}>
             <Card style={{marginTop:`1rem`}}>
-              <Card.Img variant="top" src={C1Img} alt={`お役立ち資料`} />
+            <Link to={`/preparation/`}>
+              <Card.Img variant="top" src={C1Img} alt={`お役立ち資料`} /></Link>
               <Card.Body>
                 <Card.Title style={{fontSize:`1rem`}}>お役立ち資料</Card.Title>
               </Card.Body>
@@ -101,7 +102,8 @@ const IndexPage = ({data}) => (
           </Col>
           <Col xs={6} md={4}>
             <Card style={{marginTop:`1rem`}}>
-              <Card.Img variant="top" src={C3Img} alt={`記事一覧`} />
+            <Link to={`/information/`}>
+              <Card.Img variant="top" src={C3Img} alt={`記事一覧`} /></Link>
               <Card.Body>
                 <Card.Title style={{fontSize:`1rem`}}>記事一覧</Card.Title>
               </Card.Body>
@@ -109,7 +111,8 @@ const IndexPage = ({data}) => (
           </Col>
           <Col xs={6} md={4}>
             <Card style={{marginTop:`1rem`}}>
-              <Card.Img variant="top" src={C2Img} alt={`特集コンテンツ`} />
+              <Link to={`/preparation/`}>
+              <Card.Img variant="top" src={C2Img} alt={`特集コンテンツ`} /></Link>
               <Card.Body>
                 <Card.Title style={{fontSize:`1rem`}}>特集コンテンツ</Card.Title>
               </Card.Body>
