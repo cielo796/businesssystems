@@ -4,6 +4,17 @@ import { Col, Row } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
+//ReactShare
+import {
+    FacebookIcon,
+    FacebookShareButton,
+    TwitterShareButton,
+    TwitterIcon,
+    LineShareButton,
+    LineIcon,
+    LinkedinShareButton,
+    LinkedinIcon,
+} from 'react-share'
 
 const InformationPost = ({ data }) => { 
     const post = data.microcmsInformation // ㊟ allMicrocmsInformation で ない
@@ -34,7 +45,22 @@ const InformationPost = ({ data }) => {
                 < Row >
                 < Col className =" space"></ Col > 
                 </ Row >
-            </ Layout >
+                <p>共有する</p>
+                <div className="share-flex">
+                    <FacebookShareButton title={post.title} url={`/information/${post.id}`}>
+                        <FacebookIcon size={28} round />
+                    </FacebookShareButton>
+                    <TwitterShareButton title={post.title} url={`${data.site.siteMetadata.siteUrl}/information/${post.id}`}>
+                        <TwitterIcon size={28} round />            
+                    </TwitterShareButton>
+                    <LinkedinShareButton title={post.title} url={`/information/${post.id}`}>
+                        <LinkedinIcon  size={28} round />
+                    </LinkedinShareButton>
+                    <LineShareButton title={post.title} url={`${data.site.siteMetadata.siteUrl}/information/${post.id}`}>
+                        <LineIcon size={28} round />
+                    </LineShareButton>
+                </div>
+            </ Layout >    
          ) 
     } 
     
@@ -51,6 +77,11 @@ export const query = graphql `
           category
          } 
        } 
+    site {
+        siteMetadata {
+          siteUrl
+        }
+      }
     }
     `
 

@@ -37,7 +37,7 @@ const ContactPage = () => (
                         <Form.Control type="text" as="input" placeholder="電話番号" name="Phone" required />
                     </Form.Group>
                     <Form.Group controlId="formTextarea">
-                        <Form.Control as="textarea" placeholder="メッセージ" rows="3" name="message" required />
+                        <Form.Control as="textarea" placeholder="お問い合わせ内容" rows="3" name="message" required />
                     </Form.Group>
                     <Form.Group>
                         <Form.File id="FormControlFile" name="file" lang="ja" label="ファイル添付" />

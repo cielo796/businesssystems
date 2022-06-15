@@ -3,7 +3,7 @@ module.exports = {
     title: `システムDXメディア`,
     description: `業務システムを中心に企業のDXを支援する情報を発信`,
     author: ``,
-    siteUrl: `https://yah-space.tech`,
+    siteUrl: `https://systemdx.net`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
