@@ -36,11 +36,17 @@ h5 {
 .share-flex {
   padding: 0.0.0.20;  
 }
-/* 画像設定 */
+.cardre {
+    height:37rem;
+}
+/* レスポンシブ設定 */
 @media screen and (max-width:480px) {
   img {
   width:100%;
   max-width: 100%;
   height: auto;
   }
+  .cardre {
+    height:auto;
+}
 }
