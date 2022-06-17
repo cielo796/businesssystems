@@ -22,7 +22,7 @@ const InformationNewsPage = ({ data }) => (
     <Row>
     {data.allMicrocmsInformation.edges.map(({ node }) => (
           <Col xs={12} md={6} key={node.id}>
-            <Card style={{ paddingTop:`0.5rem` }}>
+            <Card style={{ paddingTop:`0.5rem`,height:'37rem' }}>
            <Link to={`/information/${node.id}`}>
             <Card.Img variant="top" src={node.articleimage.url} /></Link>
               <Card.Body>
