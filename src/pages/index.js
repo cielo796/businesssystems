@@ -4,7 +4,7 @@ import { Row, Col, Card , Button } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Link, graphql } from "gatsby";
-import homeImg from "../images/hometop.jpg"
+import header02 from "../images/header02.png"
 import C1Img from "../images/contents.jpg"
 import C2Img from "../images/book.jpg"
 import C3Img from "../images/marketing.jpg"
@@ -13,7 +13,7 @@ const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Home" />
     <Row style={{maxWidth:`1280px`}}> 
-        <img src={homeImg} style={{width:`100%`,marginBottom:`2rem`}} />
+        <img src={header02} style={{width:`100%`,marginBottom:`2rem`}} />
     </Row>
     <Row>
       <Col xs={12} md={6} style={{maxWidth:`400px`}}>
