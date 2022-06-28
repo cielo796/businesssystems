@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Col, Row, Form, Button } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import { Link } from "gatsby";
 
 const ContactPage = () => (
   <Layout>
@@ -42,6 +43,21 @@ const ContactPage = () => (
                     <Form.Group>
                         <Form.File id="FormControlFile" name="file" lang="ja" label="ファイル添付" />
                     </Form.Group>
+                        <Link to={`/privacypolicy`}>プライバシーポリシー</Link>について
+
+                        <Form>
+                            {['checkbox'].map((type) => (
+                                <div key={`default-${type}`} className="mb-3">
+                                    <Form.Check 
+                                            type={type}
+                                            id={`default-${type}`}
+                                            label={`プライバシーポリシーに同意する`}
+                                    />
+                                </div>
+                        ))}
+                        </Form>
+
+
                         <Button variant="light" type="submit">送信</Button>
                     </Form>
                 </Col>

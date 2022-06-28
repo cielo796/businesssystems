@@ -1,6 +1,10 @@
-li{
-    display: inline;
-    padding: 0.3rem;
+.listnumber{
     color: blue;
     font-size:xx-large;
+
+    a{
+        border: solid 3px #000000;
+        padding: 0em 0.4em 0em 0.4em;
+        margin: 0.2em;
+    }
 }

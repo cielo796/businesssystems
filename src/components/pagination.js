@@ -10,13 +10,12 @@ export const Pagination = ({ totalCount }) => {
   const range = (start, end) => [...Array(end - start + 1)].map((_, i) => start + i)
 
   return (
+    <div class="listnumber">
      <ul > 
       {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => (
-   <li key={index}>
-     <Link to={`/information/${number}`}>{number}</Link>
-     </li>
-
+          <Link to={`/information/${number}`}>{number}</Link>
       ))}
     </ul>
+    </div>
   )
 }
