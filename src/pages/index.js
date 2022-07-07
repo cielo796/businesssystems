@@ -44,13 +44,19 @@ const IndexPage = ({data}) => (
         </Row>
         {data.blog.edges.map(({ node }) => (
           <Row>
-            <Card>
-              <Card.Header>{node.category.category }</Card.Header>
-                <Card.Body>
-                  <Card.Title><Link to={`/information/${node.id}`}>{node.title}</Link></Card.Title>
-                </Card.Body>
-              </Card>
-            </Row>
+          <Card style={{ width: '28rem',paddingTop:`0.5rem` }}>
+          <Link to={`/information/${node.id}`}>
+           <Card.Img variant="top" src={node.articleimage.url} /></Link>
+             <Card.Body>
+               <Card.Title>{node.title}</Card.Title>
+                 <Card.Text>
+                   {node.except}
+                 </Card.Text>
+               <Link to={`/information/${node.id}`}>
+               <Button variant="primary">記事を読む</Button></Link>
+             </Card.Body>
+           </Card>
+           </Row>
         ))}
         </Col>
         <Col xs={12} md={6} style={{maxWidth:`300px`}}>
@@ -156,7 +162,7 @@ query {
   blog: allMicrocmsInformation(
     limit: 5,
     sort: {fields: date, order: DESC} 
-    filter: {category: {category: {eq: "blog"}}}
+    filter: {category: {category: {eq: "Blog"}}}
      ) {
       edges {
         node {
