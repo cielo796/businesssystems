@@ -12,6 +12,13 @@ module.exports = {
         trackingIds: [process.env.GATSBY_TRACKING_ID],
       },
     },
+    {
+      resolve: `@isamrish/gatsby-plugin-google-adsense`,
+      options: {
+        googleAdClientId: "ca-pub-9862632130449490",
+        head: false // Optional
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
