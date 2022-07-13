@@ -11,11 +11,9 @@ export const Pagination = ({ totalCount }) => {
 
   return (
     <div class="listnumber">
-     <ul > 
       {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => (
           <Link to={`/information/${number}`}>{number}</Link>
       ))}
-    </ul>
     </div>
   )
 }

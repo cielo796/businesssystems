@@ -11,11 +11,9 @@ export const PaginationNews = ({ totalCount }) => {
 
   return (
     <div class="listnumber">
-     <ul > 
       {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => (
           <Link to={`/informationnews/${number}`}>{number}</Link>
       ))}
-    </ul>
     </div>
   )
 }
