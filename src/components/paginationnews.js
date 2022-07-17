@@ -1,7 +1,7 @@
 //components/pagination.js
 import React from "react"
 import { Link } from "gatsby"
-import {Button, ButtonToolbar,ButtonGroup} from 'react-bootstrap';
+import {Pagination} from 'react-bootstrap';
 import "./pagination.scss";
 
 export const PaginationNews = ({ totalCount }) => {
