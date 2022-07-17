@@ -19,6 +19,17 @@ module.exports = {
         head: false // Optional
       },
     },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: `https://systemdx.net`,
+        sitemap: `https://systemdx.net/sitemap/sitemap-0.xml`,
+        policy: [{ userAgent: `*`, allow: `/` }],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
