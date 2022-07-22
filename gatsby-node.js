@@ -37,7 +37,7 @@ exports.createPages = ({ graphql, actions }) => {
       })
   })
 
-  const PerPage = 5
+  const PerPage = 15
   const pageCount = Math.ceil(result.data.allMicrocmsInformation.totalCount / PerPage)
 
   
@@ -48,6 +48,7 @@ exports.createPages = ({ graphql, actions }) => {
       context: {
         limit: PerPage,
         skip: i * PerPage,
+        pagenumber: pageCount
       },
     })
   }

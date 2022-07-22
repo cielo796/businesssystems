@@ -51,7 +51,7 @@ query postnews {
     allMicrocmsInformation (
         sort: {fields: [date], order: DESC}
         filter: {category: {category: {eq: "NEWS"}}}
-        ,limit: 5, skip: 0
+        ,limit: 15, skip: 0
         ) {
       totalCount
       edges {

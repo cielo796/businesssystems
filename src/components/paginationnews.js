@@ -5,7 +5,7 @@ import {Pagination} from 'react-bootstrap';
 import "./pagination.scss";
 
 export const PaginationNews = ({ totalCount }) => {
-  const PER_PAGE = 5
+  const PER_PAGE = 15
 
   const range = (start, end) => [...Array(end - start + 1)].map((_, i) => start + i)
 
