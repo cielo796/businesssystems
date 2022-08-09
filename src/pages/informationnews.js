@@ -40,7 +40,10 @@ const InformationNewsPage = ({ data }) => (
     <Row>
       <Col className="space"> </Col>
     </Row>
-    <PaginationNews totalCount={data.allMicrocmsInformation.totalCount} />
+    <Link to={`/informationnews/2`}>
+         <Button variant="primary">Next Page →</Button>
+    </Link>
+    {/* <PaginationNews totalCount={data.allMicrocmsInformation.totalCount} /> */}
   </Layout>
 );
 

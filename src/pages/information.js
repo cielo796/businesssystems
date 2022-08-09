@@ -40,7 +40,11 @@ const InformationPage = ({ data }) => (
     <Row>
       <Col className="space"> </Col>
     </Row>
-    <Pagination totalCount={data.allMicrocmsInformation.totalCount} />
+      <Link to={`/information/2`}>
+         <Button variant="primary">Next Page →</Button>
+    </Link>
+    {/* <Pagination totalCount={data.allMicrocmsInformation.totalCount} /> */}
+
   </Layout>
 );
 

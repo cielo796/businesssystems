@@ -48,15 +48,15 @@ exports.createPages = ({ graphql, actions }) => {
       context: {
         limit: PerPage,
         skip: i * PerPage,
+        pageCount,
         currentPage:i + 1
       },
     })
   }
 
-  const PerPageNews = 5
+  const PerPageNews = 15
   const pageCountNews = Math.ceil(result.data.allMicrocmsInformation.totalCount / PerPage)
 
-  
   for (let i = 0; i < pageCountNews; i++) {
     createPage({
       path: `/informationnews/${i + 1}`,
@@ -64,6 +64,8 @@ exports.createPages = ({ graphql, actions }) => {
       context: {
         limit: PerPageNews,
         skip: i * PerPageNews,
+        pageCountNews,
+        currentPageNews:i + 1
       },
     })
   }

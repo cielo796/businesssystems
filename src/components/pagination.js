@@ -1,4 +1,5 @@
 //components/pagination.js
+//現在未使用
 import React from "react"
 import { Link } from "gatsby"
 import {Button, ButtonToolbar,ButtonGroup} from 'react-bootstrap';
@@ -11,9 +12,9 @@ export const Pagination = ({ totalCount }) => {
 
   return (
     <div class="listnumber">
+      
        {range(1, Math.ceil(totalCount / PER_PAGE)).map((number, index) => ( 
              <Link to={`/information/${number}`}>{number}</Link> 
-             
              )) 
        } 
     </div>

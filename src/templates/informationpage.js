@@ -5,7 +5,17 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Pagination } from "../components/pagination"
 
-const InformationPageAll = ({ data }) => (
+class InformationPageAll extends React.Component {
+  render() {
+    const { data } = this.props
+    const posts = data.allMicrocmsInformation.edge
+    const { currentPage, pageCount } = this.props.pageContext
+    const isFirst = currentPage === 1
+    const isLast = currentPage === pageCount
+    const prevPage = currentPage - 1 === 1 ? '' : (currentPage - 1).toString()
+    const nextPage = (currentPage + 1).toString()
+  
+  return (
   <Layout>
     <SEO title="記事一覧" />
     <Row>
@@ -40,9 +50,50 @@ const InformationPageAll = ({ data }) => (
     <Row>
       <Col className="space"> </Col>
     </Row>
-    <Pagination totalCount={data.allMicrocmsInformation.totalCount} />
+    <ul
+          style={{
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            listStyle: 'none',
+            padding: 0,
+          }}
+        >
+          {!isFirst && (
+            <Link to={`/information/${prevPage}`}>
+              <Button variant="primary">← Previous Page</Button>
+            </Link>
+          )}
+          {Array.from({ length: pageCount }, (_, i) => (
+            <li
+              key={`information${i + 1}`}
+              style={{
+                margin: 0,
+              }}
+            >
+             {/*  <Link
+                to={`/${i === 0 ? '' : i + 1}`}
+                style={{
+                  textDecoration: 'none',
+                  color: i + 1 === currentPage ? '#ffffff' : '',
+                  background: i + 1 === currentPage ? '#007acc' : '',
+                }}
+              >
+                {i + 1}
+              </Link> */}
+            </li>
+          ))}
+          {!isLast && (
+            <Link to={`/information/${nextPage}`}>
+              <Button variant="primary">Next Page →</Button>
+            </Link>
+          )}
+        </ul>
   </Layout>
-);
+  )
+  }
+}
 
 export default InformationPageAll;
 
