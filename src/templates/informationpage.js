@@ -7,6 +7,7 @@ import { Pagination } from "../components/pagination"
 
 class InformationPageAll extends React.Component {
   render() {
+    // 次へ戻る実装用
     const { data } = this.props
     const posts = data.allMicrocmsInformation.edge
     const { currentPage, pageCount } = this.props.pageContext
@@ -30,6 +31,7 @@ class InformationPageAll extends React.Component {
       <Col className="space"></Col>
     </Row>
     <Row>
+      {/* 記事生成 */}
     {data.allMicrocmsInformation.edges.map(({ node }) => (
           <Col xs={12} md={6} key={node.id}>
             <Card style={{ paddingTop:`0.5rem` }} className="cardre">
@@ -60,6 +62,7 @@ class InformationPageAll extends React.Component {
             padding: 0,
           }}
         >
+          {/* 最初のページ判定＆戻るボタン */}
           {!isFirst && (
             <Link to={`/information/${prevPage}`}>
               <Button variant="primary">← Previous Page</Button>
@@ -72,6 +75,7 @@ class InformationPageAll extends React.Component {
                 margin: 0,
               }}
             >
+            {/* ページネーションレイアウトの問題があり未実装　*/}
              {/*  <Link
                 to={`/${i === 0 ? '' : i + 1}`}
                 style={{
@@ -84,6 +88,7 @@ class InformationPageAll extends React.Component {
               </Link> */}
             </li>
           ))}
+          {/* 最初のページ判定＆次へボタン */}
           {!isLast && (
             <Link to={`/information/${nextPage}`}>
               <Button variant="primary">Next Page →</Button>

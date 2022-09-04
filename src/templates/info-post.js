@@ -25,6 +25,7 @@ const InformationPost = ({ data }) => {
           <Col className ="space">
               </Col> 
                 </Row>
+                {/* 記事の中身を生成 */}
                 <Row>
                     <Col className =" title-obi">
                     <h1 className =" h1-font">{ post. title}</h1>
@@ -46,6 +47,7 @@ const InformationPost = ({ data }) => {
                 < Col className =" space"></ Col > 
                 </ Row >
                 <p>共有する</p>
+                {/* SNSShareButton */}
                 <div className="share-flex">
                     <FacebookShareButton title={post.title} url={`/information/${post.id}`}>
                         <FacebookIcon size={28} round />

@@ -6,6 +6,7 @@ import jigyo1Img from "../images/jigyo1.jpg"
 import jigyo2Img from "../images/jigyo2.jpg"
 import jigyo3Img from "../images/jigyo3.jpg"
 
+// テンプレートのページ　未使用
 const JigyoPage = () => (
   <Layout>
     <SEO title="事業内容" />

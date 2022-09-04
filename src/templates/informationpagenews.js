@@ -7,6 +7,7 @@ import { Pagination } from "../components/pagination"
 
 class InformationPageAllNews extends React.Component {
   render() {
+    // 次へ戻る実装用
     const { data } = this.props
     const posts = data.allMicrocmsInformation.edge
     const { currentPageNews, pageCountNews } = this.props.pageContext
@@ -60,6 +61,7 @@ class InformationPageAllNews extends React.Component {
             padding: 0,
           }}
         >
+          {/* 最初のページ判定＆戻るボタン */}
           {!isFirst && (
             <Link to={`/informationnews/${prevPage}`}>
               <Button variant="primary">← Previous Page</Button>
@@ -72,6 +74,7 @@ class InformationPageAllNews extends React.Component {
                 margin: 0,
               }}
             >
+              {/*レイアウトの問題もありページネーション未実装  */}
              {/*  <Link
                 to={`/${i === 0 ? '' : i + 1}`}
                 style={{
@@ -84,6 +87,7 @@ class InformationPageAllNews extends React.Component {
               </Link> */}
             </li>
           ))}
+          {/* 最初のページ判定＆次へボタン */}
           {!isLast && (
             <Link to={`/informationnews/${nextPage}`}>
               <Button variant="primary">Next Page →</Button>

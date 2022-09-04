@@ -21,6 +21,7 @@ const ContactPage = () => (
             <Container className="" style={{width:`80%`}}>
             <Row>
                 <Col>
+                    {/* flexyFormとの連携設定 */}
                     <Form method="post"
                         action="https://www.flexyform.com/f/51b3b425f5ef88aec45c32c44785f9f557148c55"
                         encType="multipart/from-data" >

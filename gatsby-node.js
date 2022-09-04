@@ -36,7 +36,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
       })
   })
-
+  // 記事一覧設定
   const PerPage = 15
   const pageCount = Math.ceil(result.data.allMicrocmsInformation.totalCount / PerPage)
 
@@ -53,7 +53,7 @@ exports.createPages = ({ graphql, actions }) => {
       },
     })
   }
-
+  // NEWS一覧生成
   const PerPageNews = 15
   const pageCountNews = Math.ceil(result.data.allMicrocmsInformation.totalCount / PerPage)
 

@@ -3,6 +3,7 @@ import { Col, Row, Table } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 
+// レイアウトページ未実装
 const AboutPage = () => (
   <Layout>
     <SEO title="会社概要" />

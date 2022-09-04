@@ -11,6 +11,7 @@ const InformationNewsPage = ({ data }) => (
     <Row>
       <Col className="space"></Col>
     </Row>
+    {/* NEWSページ一覧を生成 */}
     <Row>
       <Col className="title-obi">
         <h1 className="h1-font">記事一覧</h1>
