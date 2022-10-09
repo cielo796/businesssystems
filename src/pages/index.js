@@ -30,9 +30,9 @@ const IndexPage = ({data}) => {
                   <Card.Img variant="top" src={node.articleimage.url} /></Link>
                 <Card.Body>
                   <Card.Title>{node.title}</Card.Title>
-                  <Card.Text>
-                    {node.except}
-                  </Card.Text>
+                  {/* <Card.Text> */}
+                    {/* {node.except} */}
+                  {/* </Card.Text> */}
                   <Link to={`/information/${node.id}`}>
                     <Button variant="primary">記事を読む</Button></Link>
                 </Card.Body>
@@ -53,9 +53,9 @@ const IndexPage = ({data}) => {
                   <Card.Img variant="top" src={node.articleimage.url} /></Link>
                 <Card.Body>
                   <Card.Title>{node.title}</Card.Title>
-                  <Card.Text>
-                    {node.except}
-                  </Card.Text>
+                  {/* <Card.Text> */}
+                    {/* {node.except} */}
+                  {/* </Card.Text> */}
                   <Link to={`/information/${node.id}`}>
                     <Button variant="primary">記事を読む</Button></Link>
                 </Card.Body>
@@ -86,9 +86,9 @@ const IndexPage = ({data}) => {
                   <Card.Img variant="top" src={node.articleimage.url} /></Link>
                 <Card.Body>
                   <Card.Title>{node.title}</Card.Title>
-                  <Card.Text>
-                    {node.except}
-                  </Card.Text>
+                  {/* <Card.Text> */}
+                    {/* {node.except} */}
+                  {/* </Card.Text> */}
                   <Link to={`/information/${node.id}`}>
                     <Button variant="primary">記事を読む</Button></Link>
                 </Card.Body>

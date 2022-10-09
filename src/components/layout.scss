@@ -50,3 +50,15 @@ h5 {
     height:auto;
 }
 }
+.col-md-6.col-12{
+  .row{
+    .card{
+      height: 27rem;
+      .btn.btn-primary
+      {
+        position: absolute;
+        bottom: 1rem;
+      }
+    }
+  }
+}

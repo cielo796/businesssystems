@@ -57,8 +57,6 @@ const ContactPage = () => (
                                 </div>
                         ))}
                         </Form>
-
-
                         <Button variant="light" type="submit">送信</Button>
                     </Form>
                 </Col>
