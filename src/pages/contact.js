@@ -44,9 +44,9 @@ const ContactPage = () => (
                     <Form.Group>
                         <Form.File id="FormControlFile" name="file" lang="ja" label="ファイル添付" />
                     </Form.Group>
-                        <Link to={`/privacypolicy`}>プライバシーポリシー</Link>について
+                        <p>記入された個人情報は<Link to={`/privacypolicy`}>プライバシーポリシー</Link>に則り適切に管理します。</p>
 
-                        <Form>
+                        {/* <Form>
                             {['checkbox'].map((type) => (
                                 <div key={`default-${type}`} className="mb-3">
                                     <Form.Check 
@@ -56,7 +56,7 @@ const ContactPage = () => (
                                     />
                                 </div>
                         ))}
-                        </Form>
+                        </Form> */}
                         <Button variant="light" type="submit">送信</Button>
                     </Form>
                 </Col>
