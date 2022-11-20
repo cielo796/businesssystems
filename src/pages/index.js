@@ -4,7 +4,7 @@ import { Row, Col, Card , Button } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Link, graphql } from "gatsby";
-import header02 from "../images/header02.png"
+import header02 from "../images/header03.png"
 import C1Img from "../images/contents.jpg"
 import C2Img from "../images/book.jpg"
 import C3Img from "../images/marketing.jpg"

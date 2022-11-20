@@ -4,7 +4,8 @@ import React from "react";
 import { Navbar, Nav, NavItem } from "react-bootstrap";
 
 const Header = ({ siteTitle }) => (
-  <Navbar bg="light" variant="light" expand="lg">
+
+ <Navbar bg="light" variant="light" expand="lg">
     <Navbar.Brand as={Link} href="/">
       {siteTitle}
     </Navbar.Brand>
@@ -18,12 +19,15 @@ const Header = ({ siteTitle }) => (
         </NavItem>
         <NavItem href="/about">
           <Nav.Link as={Link} activeClassName="active" >
-            <a href="https://forms.zohopublic.jp/goubarasaasis/form/Untitled/formperma/1Bxg8HhnKoeMbN6Wfj19aZgbU7PjjN8y0Kjut9bjjA0">お問い合わせ</a>
+          <div class="hlink">
+              <a href="https://forms.zohopublic.jp/goubarasaasis/form/Untitled/formperma/1Bxg8HhnKoeMbN6Wfj19aZgbU7PjjN8y0Kjut9bjjA0">お問い合わせ</a>
+          </div>
           </Nav.Link>
         </NavItem>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
+
 );
 
 Header.propTypes = {
