@@ -2,6 +2,7 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import { Navbar, Nav, NavItem } from "react-bootstrap";
+import "./header.scss";
 
 const Header = ({ siteTitle }) => (
 
