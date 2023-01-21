@@ -19,7 +19,7 @@ import {
 
 const InformationPost = ({ data }) => { 
     const post = data.microcmsInformation // ㊟ allMicrocmsInformation で ない
-    const post2 = data.allMicrocmsInformation
+    
         return ( 
         <Layout> 
         <SEO title ={post. title} />
@@ -64,15 +64,13 @@ const InformationPost = ({ data }) => {
                         <LineIcon size={28} round />
                     </LineShareButton>
                 </div>
-                {data.allMicrocmsInformation.edges.map(({ node }) => (
                 <Helmet>
-                    <meta property="og:title" content={post2.title} />
+                    <meta property="og:title" content={post.title} />
                     <meta property="og:type" content="article" />
-                    <meta property="og:image" content={node.articleimage.url} />
-                    <meta property="og:url" content={`/information/${node.id}`} />
-                    <meta property="og:description" content={node.except} />
+                    <meta property="og:image" content={post.articleimage.url} />
+                    <meta property="og:url" content={`/information/${post.id}`} />
+                    <meta property="og:description" content={post.except} />
                 </Helmet>
-                ))}
             </ Layout >  
          ) 
     } 
@@ -84,7 +82,11 @@ export const query = graphql `
     microcmsInformation( id: { eq: $ id }) {
         id
         title
+        except
         date( formatString: "YYYY 年 MM 月 DD 日")
+        articleimage {
+            url
+          }
         body 
         category {
           category
@@ -95,26 +97,6 @@ export const query = graphql `
           siteUrl
         }
       }
-      allMicrocmsInformation (filter: {id: {eq: $ id }}) {
-        totalCount
-        edges {
-          node {
-            id
-            except
-            body
-            title
-            date(formatString: "YYYY年MM月DD日")
-            category {
-              category
-            }
-            articleimage {
-              url
-              height
-              width
-            }
-          }
-        }
-      }  
     }
 `
 
