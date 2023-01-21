@@ -1,6 +1,7 @@
 
 import React from "react";
 import { Row, Col, Card , Button } from "react-bootstrap";
+import { Timeline } from 'react-twitter-widgets';
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Link, graphql } from "gatsby";
@@ -8,6 +9,8 @@ import header02 from "../images/header03.png"
 import C1Img from "../images/contents.jpg"
 import C2Img from "../images/book.jpg"
 import C3Img from "../images/marketing.jpg"
+import mailmaga from "../images/mailmagalogo.png"
+import LINEMA from "../images/LINEMarktingWhitePape.png"
 
 const IndexPage = ({data}) => {
   return (
@@ -64,8 +67,23 @@ const IndexPage = ({data}) => {
           ))}
         </Col>
         <Col xs={12} md={6} style={{ maxWidth: `300px` }}>
-          <Row>
-            <Col></Col>
+          <Row style={{ backgroundColor: `white`, color: `white`, padding: `0.5rem` }}>
+            <Col>
+             {/* メルマガ登録 */}
+              <a href="https://forms.zohopublic.jp/goubarasaasis/form/Untitled1/formperma/BK3sytC1Y28nbBln6mBPBiIU1c1ViMZBiYTV7jvbnoM">
+                <img className="imgb" src={mailmaga}/>
+              </a>
+              {/* Twitter表示 */}
+              <Timeline
+                dataSource={{
+                  sourceType: 'profile',
+                  screenName: 'SystemdxM' // アカウント名
+                }}
+                options={{
+                  height: '800'
+                  }}
+                />
+            </Col>
           </Row>
         </Col>
         {/* 特集レイアウト */}
@@ -73,6 +91,20 @@ const IndexPage = ({data}) => {
           <Row>
             <Col style={{ backgroundColor: `cornflowerblue`, color: `white`, padding: `0.5rem` }}>特集</Col>
           </Row>
+          <Row>
+              <Card style={{ width: '28rem', paddingTop: `0.5rem` }}>
+                <Link to={`/linewhitepaper`}>
+                  <Card.Img variant="top" src={LINEMA} /></Link>
+                <Card.Body>
+                  <Card.Title>売上を増やすLINEマーケティングとは</Card.Title>
+                  {/* <Card.Text> */}
+                    {/* {node.except} */}
+                  {/* </Card.Text> */}
+                  <Link to={`/linewhitepaper`}>
+                    <Button variant="primary">特集ページへ</Button></Link>
+                </Card.Body>
+              </Card>
+            </Row>
         </Col>
         {/* コラムレイアウト */}
         <Col xs={12} md={6} style={{ maxWidth: `400px` }}>

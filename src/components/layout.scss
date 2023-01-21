@@ -18,6 +18,10 @@ html {
 .whcolor {
   color: white;
 }
+.orcolor {
+  color: #E98B2A;
+  font-weight: bold;
+}
 p#link {
 	color: lightgrey;
 }
@@ -27,6 +31,17 @@ p#link {
 }
 .h1-font {
   font-size: 1.2rem;
+}
+.menu-font {
+  color: cornflowerblue;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 1em;
+}
+.tifont {
+  font-size: 1.2rem;
+  color: cornflowerblue;
 }
 .btn-set {
   padding: 0.5rem;
@@ -42,6 +57,31 @@ h5 {
 .cardre {
     height:37rem;
 }
+.imgb {
+  padding-bottom: 0.5rem;
+}
+.imgcenter {
+  margin:8em 0 auto;
+}
+.mgcenter {
+  margin: 0 auto;
+}
+.box {
+  margin: 0 auto;
+  font-weight: bold;
+  color: cornflowerblue;/*文字色*/
+  background: #FFF;
+  border: solid 3px cornflowerblue;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  padding: 1em 1.5em 0 1.5em;
+}
+.box2 {
+  padding: 0.5em 1em;
+  margin: 2em 0;
+  font-weight: bold;
+  border: solid 3px cornflowerblue;
+}
+
 /* レスポンシブ設定 */
 @media screen and (max-width:480px) {
   img {
