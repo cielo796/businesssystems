@@ -9,7 +9,7 @@ import header02 from "../images/header03.png"
 import C1Img from "../images/contents.jpg"
 import C2Img from "../images/book.jpg"
 import C3Img from "../images/marketing.jpg"
-import mailmaga from "../images/mailmagalogo.png"
+import mailmaga from "../images/mailmagaLogo.png"
 import LINEMA from "../images/LINEMarktingWhitePape.png"
 
 const IndexPage = ({data}) => {
