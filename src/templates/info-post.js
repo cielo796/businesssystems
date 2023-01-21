@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby";
 import { Col, Row } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
+import Helmet from 'react-helmet'
 
 //ReactShare
 import {
@@ -18,6 +19,7 @@ import {
 
 const InformationPost = ({ data }) => { 
     const post = data.microcmsInformation // ㊟ allMicrocmsInformation で ない
+    const post2 = data.allMicrocmsInformation
         return ( 
         <Layout> 
         <SEO title ={post. title} />
@@ -62,7 +64,16 @@ const InformationPost = ({ data }) => {
                         <LineIcon size={28} round />
                     </LineShareButton>
                 </div>
-            </ Layout >    
+                {data.allMicrocmsInformation.edges.map(({ node }) => (
+                <Helmet>
+                    <meta property="og:title" content={post2.title} />
+                    <meta property="og:type" content="article" />
+                    <meta property="og:image" content={node.articleimage.url} />
+                    <meta property="og:url" content={`/information/${node.id}`} />
+                    <meta property="og:description" content={node.except} />
+                </Helmet>
+                ))}
+            </ Layout >  
          ) 
     } 
     
@@ -84,6 +95,26 @@ export const query = graphql `
           siteUrl
         }
       }
+      allMicrocmsInformation (filter: {id: {eq: $ id }}) {
+        totalCount
+        edges {
+          node {
+            id
+            except
+            body
+            title
+            date(formatString: "YYYY年MM月DD日")
+            category {
+              category
+            }
+            articleimage {
+              url
+              height
+              width
+            }
+          }
+        }
+      }  
     }
-    `
+`
 
