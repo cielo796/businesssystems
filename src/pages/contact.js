@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Link } from "gatsby";
 
+{/* 利用していない */}
 const ContactPage = () => (
   <Layout>
     <SEO title="お問い合わせ" />

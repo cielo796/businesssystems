@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Container, Row, Col, } from "react-bootstrap";
 
+{/* 使ってない */}
 const ContactDone = () => (
     <Layout>
      <SEO title=" お問い合わせ送信完了"/>
