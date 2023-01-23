@@ -11,8 +11,18 @@ import C2Img from "../images/book.jpg"
 import C3Img from "../images/marketing.jpg"
 import mailmaga from "../images/Mlogo.png"
 import LINEMA from "../images/LINEMarktingWhitePape.png"
+import { Adsense } from '../components/googleAdsense'
+import { useLocation } from "@reach/router"
+
+
 
 const IndexPage = ({data}) => {
+  const location = useLocation()
+  const rootPath = `${__PATH_PREFIX__}/`
+  const isRootPath = location.pathname === rootPath
+
+  //console.log(isRootPath);
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -83,6 +93,8 @@ const IndexPage = ({data}) => {
                   height: '800'
                   }}
                 />
+                <Adsense path={isRootPath} />
+                
             </Col>
           </Row>
         </Col>
@@ -101,7 +113,8 @@ const IndexPage = ({data}) => {
                     {/* {node.except} */}
                   {/* </Card.Text> */}
                   <Link to={`/linewhitepaper`}>
-                    <Button variant="primary">特集ページへ</Button></Link>
+                    <Button variant="primary">特集ページへ</Button>
+                  </Link>
                 </Card.Body>
               </Card>
             </Row>
