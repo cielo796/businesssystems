@@ -3,7 +3,9 @@ import { Link, graphql } from "gatsby";
 import { Col, Row } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import Helmet from 'react-helmet'
+import Helmet from 'react-helmet';
+import { Adsense } from '../components/googleAdsense';
+import { useLocation } from "@reach/router"
 
 //ReactShare
 import {
@@ -19,7 +21,11 @@ import {
 
 const InformationPost = ({ data }) => { 
     const post = data.microcmsInformation // ㊟ allMicrocmsInformation で ない
-    
+     {/* 自身のパス*/}
+    const location = useLocation()
+    const rootPath = `${__PATH_PREFIX__}/`
+    const isRootPath = location.pathname === rootPath
+
         return ( 
         <Layout> 
         <SEO title ={post. title} />
@@ -71,6 +77,7 @@ const InformationPost = ({ data }) => {
                     <meta property="og:url" content={`/information/${post.id}`} />
                     <meta property="og:description" content={post.except} />
                 </Helmet>
+                <Adsense path={isRootPath} />
             </ Layout >  
          ) 
     } 
