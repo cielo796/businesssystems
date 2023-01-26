@@ -4,7 +4,7 @@ import { Col, Row } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Helmet from 'react-helmet';
-import { Adsense } from '../components/googleAdsense';
+import { Adsense2 } from '../components/googleAdsense2';
 import { useLocation } from "@reach/router"
 
 //ReactShare
@@ -77,7 +77,7 @@ const InformationPost = ({ data }) => {
                     <meta property="og:url" content={`/information/${post.id}`} />
                     <meta property="og:description" content={post.except} />
                 </Helmet>
-                <Adsense path={isRootPath} />
+                <Adsense2 className="AD2" path={isRootPath} />
             </ Layout >  
          ) 
     } 
