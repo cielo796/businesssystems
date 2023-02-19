@@ -3,7 +3,6 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Container, Row, Col, } from "react-bootstrap";
 import { Link, graphql } from "gatsby";
-import header02 from "../images/header03.png";
 import preparation from "../images/preparation.png";
 import LINEPaper from "../images/LINEMarktingWhitePape.png";
 import noimg from "../images/NOIMAGE.jpg";
