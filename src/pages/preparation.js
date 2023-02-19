@@ -4,6 +4,7 @@ import SEO from "../components/seo";
 import { Container, Row, Col, } from "react-bootstrap";
 import { Link, graphql } from "gatsby";
 import header02 from "../images/header03.png";
+import preparation from "../images/preparation.png";
 import LINEPaper from "../images/LINEMarktingWhitePape.png";
 import noimg from "../images/NOIMAGE.jpg";
 import Button from 'react-bootstrap/Button';
@@ -15,7 +16,7 @@ const ContactDone = () => (
     <SEO title="LINEホワイトペーパー資料請求" />
     {/* 全体レイアウト設定 */}
     <Row style={{ maxWidth: `1280px` }}>
-        <img src={header02} style={{ width: `100%`, marginBottom: `2rem` }} />
+        <img src={preparation} style={{ width: `100%`, marginBottom: `2rem` }} />
     </Row>
     <CardGroup>
       <Card>
