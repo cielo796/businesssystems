@@ -3,9 +3,9 @@ import { Col, Row, Table } from "react-bootstrap";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Link, graphql } from "gatsby";
-import header02 from "../images/header03.png";
 import LINEPaper from "../images/LINEMarktingWhitePaper.png";
 import Button from 'react-bootstrap/Button';
+import Paper from "../images/whitepaper.png";
 
 // レイアウトページ未実装
 const linewhitepaper = () => (
@@ -13,7 +13,7 @@ const linewhitepaper = () => (
     <SEO title="LINEホワイトペーパー資料請求" />
     {/* 全体レイアウト設定 */}
     <Row style={{ maxWidth: `1280px` }}>
-        <img src={header02} style={{ width: `100%`, marginBottom: `2rem` }} />
+        <img src={Paper} style={{ width: `100%`, marginBottom: `2rem` }} />
     </Row>
     {/* Row 600px */}
     <Row>

@@ -77,7 +77,7 @@ const InformationPost = ({ data }) => {
                     <meta property="og:url" content={`/information/${post.id}`} />
                     <meta property="og:description" content={post.except} />
                 </Helmet>
-                <Adsense2 className="AD2" path={isRootPath} />
+                <Adsense2 className="AD2"p path={isRootPath} />
             </ Layout >  
          ) 
     } 
