@@ -5,7 +5,8 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Helmet from 'react-helmet';
 import { Adsense2 } from '../components/googleAdsense2';
-import { useLocation } from "@reach/router"
+import { useLocation } from "@reach/router";
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 //ReactShare
 import {
@@ -25,9 +26,26 @@ const InformationPost = ({ data }) => {
     const location = useLocation()
     const rootPath = `${__PATH_PREFIX__}/`
     const isRootPath = location.pathname === rootPath
-
+   
         return ( 
         <Layout> 
+        <GatsbySeo
+            title={post.title}
+            description={post.except}
+            openGraph={{
+                type: 'website',
+                url: `https://systemdx.net/information/${post.id}`,
+                images: [
+                    {
+                      url: post.articleimage.url,
+                      width: 800,
+                      height: 400,
+                      alt: '記事イメージ',
+                    },
+                ]
+            }}
+
+        />
         <SEO title ={post. title} />
          <Row>
           <Col className ="space">
