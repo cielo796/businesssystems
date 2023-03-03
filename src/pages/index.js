@@ -13,7 +13,7 @@ import mailmaga from "../images/Mlogo.png"
 import LINEMA from "../images/LINEMarktingWhitePape.png"
 import { Adsense } from '../components/googleAdsense'
 import { useLocation } from "@reach/router"
-
+import Helmet from 'react-helmet';
 
 
 const IndexPage = ({data}) => {
@@ -182,6 +182,11 @@ const IndexPage = ({data}) => {
       <Row>
         <Col style={{ maxWidth: `1200px`, paddingTop: `3rem` }}></Col>
       </Row>
+      <Helmet>
+        <title>システムDXメディア</title>
+        <meta name="description" content="業務システムを中心にDXに繋がる情報を発信." />
+        <meta name="google-site-verification" content="google-site-verification: google2a2269b3f72df574.html" />
+      </Helmet>
     </Layout>
   );
 };
