@@ -185,7 +185,7 @@ const IndexPage = ({data}) => {
       <Helmet>
         <title>システムDXメディア</title>
         <meta name="description" content="業務システムを中心にDXに繋がる情報を発信." />
-        <meta name="google-site-verification" content="google-site-verification: google2a2269b3f72df574.html" />
+        <meta name="google-site-verification" content="2VIYtF-vh2LPllsD9vbyyYywmnw9CRPg1DjaXPS739E" />
       </Helmet>
     </Layout>
   );
