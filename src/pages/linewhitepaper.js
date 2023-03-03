@@ -6,10 +6,29 @@ import { Link, graphql } from "gatsby";
 import LINEPaper from "../images/LINEMarktingWhitePaper.png";
 import Button from 'react-bootstrap/Button';
 import Paper from "../images/whitepaper.png";
+import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 // レイアウトページ未実装
-const linewhitepaper = () => (
+const linewhitepaper = () => {
+  return (
   <Layout>
+  <GatsbySeo
+            title='LINEホワイトペーパー資料請求'
+            description='この資料ではLINE公式アカウントの紹介や連携事例に集客支援やマーケティングオートメーションの事例を紹介しています。'
+            openGraph={{
+                type: 'website',
+                url: `https://systemdx.net/linewhitepaper`,
+                images: [
+                    {
+                      url: Paper,
+                      width: 800,
+                      height: 400,
+                      alt: '記事イメージ',
+                    },
+                ]
+            }}
+
+        />
     <SEO title="LINEホワイトペーパー資料請求" />
     {/* 全体レイアウト設定 */}
     <Row style={{ maxWidth: `1280px` }}>
@@ -60,6 +79,7 @@ const linewhitepaper = () => (
       <Col className="space"></Col>
     </Row>
   </Layout>
-);
+  );
+};
 
 export default linewhitepaper;

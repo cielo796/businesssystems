@@ -68,7 +68,20 @@ module.exports = {
            }],
          },
        },
-    `gatsby-plugin-react-helmet`
+    'gatsby-plugin-next-seo',
+    {
+      resolve: 'gatsby-plugin-next-seo',
+      options: {
+        openGraph: {
+          type: 'website',
+          locale: 'ja_JP',
+          url: 'https://systemdx.net',
+          site_name: 'システムDXメディア',
+          },
+        },
+      },
+    `gatsby-plugin-react-helmet`,
+    
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
