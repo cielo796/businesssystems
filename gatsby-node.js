@@ -54,18 +54,18 @@ exports.createPages = ({ graphql, actions }) => {
     })
   }
   // NEWS一覧生成
-  const PerPageNews = 15
-  const pageCountNews = Math.ceil(result.data.allMicrocmsInformation.totalCount / PerPage)
+  const PerPageblog = 15
+  const pageCountblog = Math.ceil(result.data.allMicrocmsInformation.totalCount / PerPage)
 
-  for (let i = 0; i < pageCountNews; i++) {
+  for (let i = 0; i < pageCountblog; i++) {
     createPage({
       path: `/informationnews/${i + 1}`,
-      component: path.resolve("./src/templates/informationpagenews.js"),
+      component: path.resolve("./src/templates/informationpageblog.js"),
       context: {
-        limit: PerPageNews,
-        skip: i * PerPageNews,
-        pageCountNews,
-        currentPageNews:i + 1
+        limit: PerPageblog,
+        skip: i * PerPageblog,
+        pageCountblog,
+        currentPageblog:i + 1
       },
     })
   }

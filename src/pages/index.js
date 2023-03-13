@@ -75,6 +75,7 @@ const IndexPage = ({data}) => {
               </Card>
             </Row>
           ))}
+          <div class="btn-set"><Button variant="primary"><Link to="/informationblog"><div class="whcolor">記事一覧へ</div></Link></Button></div>
         </Col>
         <Col xs={12} md={6} style={{ maxWidth: `300px` }}>
           <Row style={{ backgroundColor: `white`, color: `white`, padding: `0.5rem` }}>
