@@ -94,6 +94,7 @@ const IndexPage = ({data}) => {
                   height: '800'
                   }}
                 />
+                 <div style={{ marginTop: `1rem` }}></div> {/* 空白 */}
                 <Adsense path={isRootPath} />
                 
             </Col>
