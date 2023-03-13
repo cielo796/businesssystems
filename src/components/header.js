@@ -19,10 +19,8 @@ const Header = ({ siteTitle }) => (
           </Nav.Link>
         </NavItem>
         <NavItem href="/about">
-          <Nav.Link as={Link} activeClassName="active" >
-          <div class="hlink">
-              <a href="https://forms.zohopublic.jp/goubarasaasis/form/Untitled/formperma/1Bxg8HhnKoeMbN6Wfj19aZgbU7PjjN8y0Kjut9bjjA0">お問い合わせ</a>
-          </div>
+          <Nav.Link as={Link} activeClassName="active"  to="/forms">
+            お問い合わせ
           </Nav.Link>
         </NavItem>
       </Nav>
