@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Pagination } from "../components/pagination"
 
-class InformationPageAllNews extends React.Component {
+class InformationPageAllblog extends React.Component {
   render() {
     // 次へ戻る実装用
     const { data } = this.props
@@ -99,7 +99,7 @@ class InformationPageAllNews extends React.Component {
   }
 }
 
-export default InformationPageAllNews;
+export default InformationPageAllblog;
 
 export const query = graphql`
 query ($limit: Int!, $skip: Int!) {
