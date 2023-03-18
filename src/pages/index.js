@@ -84,6 +84,11 @@ const IndexPage = ({data}) => {
               <a href="https://forms.zohopublic.jp/goubarasaasis/form/Untitled1/formperma/BK3sytC1Y28nbBln6mBPBiIU1c1ViMZBiYTV7jvbnoM">
                 <img className="imgb" src={mailmaga}/>
               </a>
+              {/* LINE公式登録 */}
+              <a href="https://lin.ee/kunrfpc">
+                 <img src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="友だち追加" height="90" width="300" border="0" />
+              </a>
+              <div style={{ marginTop: `1rem` }}></div> {/* 空白 */}
               {/* Twitter表示 */}
               <Timeline
                 dataSource={{
