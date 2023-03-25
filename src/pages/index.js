@@ -176,7 +176,7 @@ const IndexPage = ({data}) => {
             </Col>
             <Col xs={6} md={4}>
               <Card style={{ marginTop: `1rem` }}>
-                <Link to={`/preparation/`}>
+                <Link to={`/feature/`}>
                   <Card.Img variant="top" src={C2Img} alt={`特集コンテンツ`} /></Link>
                 <Card.Body>
                   <Card.Title style={{ fontSize: `1rem` }}>特集コンテンツ</Card.Title>
