@@ -3,30 +3,30 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Container, Row, Col, } from "react-bootstrap";
 import { Link, graphql } from "gatsby";
-import headerw from "../images/headerw.png";
-import LINEPaper from "../images/LINEMarktingWhitePape.png";
+import headerf from "../images/headerw.png";
 import noimg from "../images/NOIMAGE.jpg";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import feater from "../images/PAFeater.png";
 
-const Preparation = () => (
+const Feature = () => (
     <Layout>
     <SEO title="LINEホワイトペーパー資料請求" />
     {/* 全体レイアウト設定 */}
     <Row style={{ maxWidth: `1280px` }}>
-        <img src={headerw} style={{ width: `100%`, marginBottom: `2rem` }} />
+        <img src={headerf} style={{ width: `100%`, marginBottom: `2rem` }} />
     </Row>
     <CardGroup>
       <Card>
-      <Link to={`/linewhitepaper`}>
-        <Card.Img variant="top" src={LINEPaper} /></Link>
+      <Link to={`/powerautomatefeature`}>
+        <Card.Img variant="top" src={feater} /></Link>
         <Card.Body>
-          <Card.Title>売上を増やすLINEマーケティングとは</Card.Title>
+          <Card.Title>PowerAutoMate特集</Card.Title>
           <Card.Text>
-            LINE公式アカウントの紹介や連携事例に集客支援やマーケティングオートメーションの事例を紹介しています。
+            MicrosoftのRPAサービス、PowerAutoMateの特集です。
           </Card.Text>
-          <Link to={`/linewhitepaper`}>
+          <Link to={`/powerautomatefeature`}>
           <Button variant="primary">詳細へ</Button></Link>
         </Card.Body>
         
@@ -57,6 +57,5 @@ const Preparation = () => (
     </Row>
   </Layout>
   );
-export default Preparation
+export default Feature
 
-    
