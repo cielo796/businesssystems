@@ -34,14 +34,14 @@ class InformationPageAllNews extends React.Component {
     {data.allMicrocmsInformation.edges.map(({ node }) => (
           <Col xs={12} md={6} key={node.id}>
             <Card style={{ paddingTop:`0.5rem` }} className="cardre">
-           <Link to={`/informationnews/${node.id}`}>
+           <Link to={`/information/${node.id}`}>
             <Card.Img variant="top" src={node.articleimage.url} /></Link>
               <Card.Body>
                 <Card.Title>{node.title}</Card.Title>
                   <Card.Text>
                     {node.except}
                   </Card.Text>
-                <Link to={`/informationnews/${node.id}`}>
+                <Link to={`/information/${node.id}`}>
                 <Button variant="primary">記事を読む</Button></Link>
               </Card.Body>
             </Card>
