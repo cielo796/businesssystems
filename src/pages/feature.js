@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import { Container, Row, Col, } from "react-bootstrap";
 import { Link, graphql } from "gatsby";
-import headerf from "../images/headerw.png";
+import headerf from "../images/headerf.png";
 import noimg from "../images/NOIMAGE.jpg";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';

@@ -5,7 +5,7 @@ import SEO from "../components/seo";
 import { Link, graphql } from "gatsby";
 import LINEPaper from "../images/LINEMarktingWhitePaper.png";
 import Button from 'react-bootstrap/Button';
-import Paper from "../images/whitepaper.png";
+import Paper from "../images/headerd.png";
 import { GatsbySeo } from 'gatsby-plugin-next-seo';
 
 // レイアウトページ未実装
